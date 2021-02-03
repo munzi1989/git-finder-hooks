@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Clear = ({ users, clearUsers }) => {
   const onClick = () => {
@@ -17,8 +18,13 @@ const Clear = ({ users, clearUsers }) => {
       </div>
     );
   } else {
-      return null;
+    return null;
   }
+};
+
+Clear.propTypes = {
+  users: PropTypes.array.isRequired,
+  clearUsers: PropTypes.func.isRequired,
 };
 
 export default Clear;
