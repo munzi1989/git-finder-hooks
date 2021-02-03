@@ -7,7 +7,7 @@ import axios from 'axios';
 class App extends Component {
   state = {
     users: [],
-    loading: false,
+    loading: true,
   };
 
   async componentDidMount() {
