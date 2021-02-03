@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
 import spinner from './spinner.gif';
 
+//exporting spinner to Users.js
+
 const Spinner = () => {
   return (
     <Fragment>

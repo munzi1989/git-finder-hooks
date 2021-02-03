@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+//exporting UserItem to Users.js
+
 const UserItem = ({ user: { login, avatar_url, html_url } }) => {
   return (
     <div className="card text-center">
