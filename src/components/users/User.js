@@ -35,6 +35,8 @@ class User extends Component {
       company,
     } = this.props.user;
 
+    console.log(blog);
+
     const { loading, repos } = this.props;
 
     if (loading) {
@@ -80,9 +82,15 @@ class User extends Component {
                   <p>{bio}</p>
                 </Fragment>
               )}
-              <a href={html_url} className="btn btn-dark my-1">
+              <a
+                style={{ display: 'table-cell' }}
+                href={html_url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Check Out Profile
               </a>
+
               <ul>
                 <li>
                   {login && (
@@ -101,7 +109,8 @@ class User extends Component {
                 <li>
                   {blog && (
                     <Fragment>
-                      <strong>Website: </strong> <Link to={blog}>{blog}</Link>
+                      <strong>Website: </strong>
+                      {blog}
                     </Fragment>
                   )}
                 </li>
