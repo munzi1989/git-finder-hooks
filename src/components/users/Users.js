@@ -3,14 +3,11 @@ import UserItem from './UserItem';
 import Spinner from '../layout/Spinner';
 import PropTypes from 'prop-types';
 
-
-// exporting user data from here to UserItem component
+// exporting user data from here to UsersMain component
 
 const Users = ({ users, loading }) => {
   if (loading) {
-    return (
-        <Spinner />
-    );
+    return <Spinner />;
   } else {
     return (
       <div className="grid-3">
@@ -24,7 +21,7 @@ const Users = ({ users, loading }) => {
 
 Users.propTypes = {
   users: PropTypes.array.isRequired,
-  loading: PropTypes.bool.isRequired
+  loading: PropTypes.bool.isRequired,
 };
 
 export default Users;

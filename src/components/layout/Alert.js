@@ -1,5 +1,7 @@
 import React from 'react'
 
+// exporting to App 
+
  const Alert = ({alert}) => {
     if(alert === null){
         return null;

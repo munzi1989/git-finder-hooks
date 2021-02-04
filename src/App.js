@@ -62,9 +62,11 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
+          {/* NAVBAR */}
           <Navbar />
           <div className="container">
             <Switch>
+              {/* HOME PAGE */}
               <Route
                 exact
                 path="/"
@@ -81,7 +83,9 @@ class App extends Component {
                   </Fragment>
                 )}
               />
+              {/* ABOUT PAGE */}
               <Route exact path="/about" component={About} />
+              {/* USER ENDPOINT  */}
               <Route
                 exact
                 path="/user/:login"
@@ -104,4 +108,5 @@ class App extends Component {
   }
 }
 
+// exporting to "root" div in index.html
 export default App;
