@@ -13,19 +13,13 @@ const Users = ({ users, loading }) => {
     );
   } else {
     return (
-      <div style={userStyle}>
+      <div className="grid-3">
         {users.map((user) => {
           return <UserItem key={user.id} user={user} />;
         })}
       </div>
     );
   }
-};
-
-const userStyle = {
-  display: 'grid',
-  gridTemplateColumns: 'repeat(3, 1fr)',
-  gridGap: '1rem',
 };
 
 Users.propTypes = {
