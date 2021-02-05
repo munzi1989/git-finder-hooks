@@ -36,7 +36,7 @@ class App extends Component {
     this.setState({ user: res.data, loading: false, alert: null });
   };
 
-  //Get user repos
+  //Get user repos //passes props to Repos
   getUserRepos = async (username) => {
     this.setState({ loading: true });
     const res = await axios.get(
@@ -46,7 +46,7 @@ class App extends Component {
     this.setState({ repos: res.data, loading: false, alert: null });
   };
 
-  //Clear users searched for
+  //Clear users searched for //exporting to Clear
   clearUsers = () => {
     this.setState({ users: [] });
   };
