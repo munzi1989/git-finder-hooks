@@ -2,10 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Clear = ({ users, clearUsers }) => {
-  const onClick = () => {
-    clearUsers();
-  };
-
+  
   if (users.length !== 0) {
     return (
       <div>
@@ -13,7 +10,7 @@ const Clear = ({ users, clearUsers }) => {
           type="button"
           value="Clear"
           className="btn btn-danger btn-block"
-          onClick={onClick}
+          onClick={clearUsers}
         />
       </div>
     );

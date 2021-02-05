@@ -7,12 +7,12 @@ import Clear from './Clear';
 
 const UsersMain = (props) => {
 
-   const {setAlert, users, clearUsers, searchUsers, loading} = props;
+   const {throwAlert, users, clearUsers, searchUsers, loading} = props;
    
   return (
     <Fragment>
       <div className="container">
-        <Search setAlert={setAlert} searchUsers={searchUsers} />
+        <Search throwAlert={throwAlert} searchUsers={searchUsers} />
         <Clear users={users} clearUsers={clearUsers} />
         <Users loading={loading} users={users} />
       </div>
