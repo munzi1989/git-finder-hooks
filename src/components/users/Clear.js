@@ -1,7 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, {useContext} from 'react';
+import GithubContext from '../../context/github/githubContext';
 
-const Clear = ({ users, clearUsers }) => {
+const Clear = () => {
+
+  const githubContext = useContext(GithubContext);
+  const { users, clearUsers } = githubContext;
   
   if (users.length !== 0) {
     return (
@@ -19,9 +22,5 @@ const Clear = ({ users, clearUsers }) => {
   }
 };
 
-Clear.propTypes = {
-  users: PropTypes.array.isRequired,
-  clearUsers: PropTypes.func.isRequired,
-};
 
 export default Clear;

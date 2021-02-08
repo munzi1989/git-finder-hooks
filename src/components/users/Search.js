@@ -1,45 +1,43 @@
-import React, {useState} from 'react';
-import PropTypes from 'prop-types';
+import React, { useContext } from 'react';
+import GithubContext from '../../context/github/githubContext';
 
-const Search = ({searchUsers, throwAlert}) => {
-  //w/ hooks, define item followed by method
-  const [text, setText] = useState('');
+const Search = () => {
+  const githubContext = useContext(GithubContext);
+  const { throwAlert, text, searchText, searchUsers } = githubContext;
 
-  const onChange = (e) => setText(e.target.value);
+  // update text state as characters are entered to search
+  const onChange = (e) => searchText(e.target.value);
 
   const onSubmit = (e) => {
     e.preventDefault();
     if (text === '') {
       throwAlert(' Please enter something', 'light');
     } else {
+      // search users using text state
       searchUsers(text);
-      setText('');
+      // set text state to empty string after search
+      searchText('');
     }
   };
 
-    return (
-      <div>
-        <form onSubmit={onSubmit} className="form">
-          <input
-            type="text"
-            name="text"
-            placeholder="Search Users..."
-            value={text}
-            onChange={onChange}
-          />
-          <input
-            type="submit"
-            value="Search"
-            className="btn btn-dark btn-block"
-          />
-        </form>
-      </div>
-    );
-}
-
-Search.propTypes = {
-    searchUsers: PropTypes.func.isRequired,
-    throwAlert: PropTypes.func.isRequired
-  };
+  return (
+    <div>
+      <form onSubmit={onSubmit} className="form">
+        <input
+          type="text"
+          name="text"
+          placeholder="Search Users..."
+          value={text}
+          onChange={onChange}
+        />
+        <input
+          type="submit"
+          value="Search"
+          className="btn btn-dark btn-block"
+        />
+      </form>
+    </div>
+  );
+};
 
 export default Search;
