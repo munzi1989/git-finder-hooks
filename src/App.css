@@ -116,6 +116,32 @@ img {
   margin: 0.7rem 0;
 }
 
+.favorite-card {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  align-content: center;
+  padding: 1rem;
+  border: #ccc 1px dotted;
+  margin: 0.7rem 0;
+}
+
+.owner {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flex-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.scale:hover {
+  background-color: gold;
+}
+
 /* List */
 .list {
   margin: 0.5rem 0;
@@ -308,6 +334,59 @@ img {
 }
 
 /* Forms */
+input {
+  margin: 1.2rem 0;
+}
+
+.form-text {
+  display: block;
+  margin-top: 0.3rem;
+  color: #888;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='date'],
+select,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+}
+
+input[type='submit'],
+button {
+  font: inherit;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.form-group {
+  margin: 1.2rem 0;
+}
+
+.form-group input {
+  margin: 0.2rem 0;
+}
+
+.form-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  overflow: hidden;
+  padding: 0 2rem;
+}
+
+.form-container h1 {
+  text-align: center;
+}
+
 input {
   margin: 1.2rem 0;
 }
